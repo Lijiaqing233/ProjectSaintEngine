@@ -31,7 +31,7 @@ private:
 	VkDescriptorSet descriptorSet;
 	vks::VulkanDevice *device;
 	VkPhysicalDeviceDriverProperties driverProperties = {};
-	VulkanBase *example;
+	VulkanBase *vulkanInstance;
 	ImGuiStyle vulkanStyle;
 	int selectedStyle = 0;
 public:
@@ -40,16 +40,16 @@ public:
 		glm::vec2 translate;
 	} pushConstBlock;
 
-	ImGUI(VulkanBase *example) : example(example)
+	ImGUI(VulkanBase *vulkanInstance) : vulkanInstance(vulkanInstance)
 	{
-		device = example->vulkanDevice;
+		device = vulkanInstance->vulkanDevice;
 		ImGui::CreateContext();
 		
 		//SRS - Set ImGui font and style scale factors to handle retina and other HiDPI displays
 		ImGuiIO& io = ImGui::GetIO();
-		io.FontGlobalScale = example->ui.scale;
+		io.FontGlobalScale = vulkanInstance->ui.scale;
 		ImGuiStyle& style = ImGui::GetStyle();
-		style.ScaleAllSizes(example->ui.scale);
+		style.ScaleAllSizes(vulkanInstance->ui.scale);
 	};
 
 	~ImGUI()
@@ -329,64 +329,16 @@ public:
 
 		pipelineCreateInfo.pVertexInputState = &vertexInputState;
 
-		shaderStages[0] = example->loadShader(shadersPath + "imgui/ui.vert.spv", VK_SHADER_STAGE_VERTEX_BIT);
-		shaderStages[1] = example->loadShader(shadersPath + "imgui/ui.frag.spv", VK_SHADER_STAGE_FRAGMENT_BIT);
+		shaderStages[0] = vulkanInstance->loadShader(shadersPath + "imgui/ui.vert.spv", VK_SHADER_STAGE_VERTEX_BIT);
+		shaderStages[1] = vulkanInstance->loadShader(shadersPath + "imgui/ui.frag.spv", VK_SHADER_STAGE_FRAGMENT_BIT);
 
 		VK_CHECK_RESULT(vkCreateGraphicsPipelines(device->logicalDevice, pipelineCache, 1, &pipelineCreateInfo, nullptr, &pipeline));
 	}
 
 	// Starts a new imGui frame and sets up windows and ui elements
-	void newFrame(VulkanBase *example, bool updateFrameGraph)
+	void newFrame(VulkanBase *vulkanInstance, bool updateFrameGraph)
 	{
 		ImGui::NewFrame();
-
-		// Init imGui windows and elements
-
-		// Debug window
-		ImGui::SetWindowPos(ImVec2(20 * example->ui.scale, 20 * example->ui.scale), ImGuiSetCond_FirstUseEver);
-        ImGui::SetWindowSize(ImVec2(300 * example->ui.scale, 300 * example->ui.scale), ImGuiSetCond_Always);
-		ImGui::TextUnformatted(example->title.c_str());
-		ImGui::TextUnformatted(device->properties.deviceName);
-		
-		//SRS - Display Vulkan API version and device driver information if available (otherwise blank)
-		ImGui::Text("Vulkan API %i.%i.%i", VK_API_VERSION_MAJOR(device->properties.apiVersion), VK_API_VERSION_MINOR(device->properties.apiVersion), VK_API_VERSION_PATCH(device->properties.apiVersion));
-		ImGui::Text("%s %s", driverProperties.driverName, driverProperties.driverInfo);
-
-		// Update frame time display
-		if (updateFrameGraph) {
-			std::rotate(uiSettings.frameTimes.begin(), uiSettings.frameTimes.begin() + 1, uiSettings.frameTimes.end());
-			float frameTime = 1000.0f / (example->frameTimer * 1000.0f);
-			uiSettings.frameTimes.back() = frameTime;
-			if (frameTime < uiSettings.frameTimeMin) {
-				uiSettings.frameTimeMin = frameTime;
-			}
-			if (frameTime > uiSettings.frameTimeMax) {
-				uiSettings.frameTimeMax = frameTime;
-			}
-		}
-
-		ImGui::PlotLines("Frame Times", &uiSettings.frameTimes[0], 50, 0, "", uiSettings.frameTimeMin, uiSettings.frameTimeMax, ImVec2(0, 80));
-
-		ImGui::Text("Camera");
-		ImGui::InputFloat3("position", &example->camera.position.x, 2);
-		ImGui::InputFloat3("rotation", &example->camera.rotation.x, 2);
-
-		// Example settings window
-		ImGui::SetNextWindowPos(ImVec2(20 * example->ui.scale, 360 * example->ui.scale), ImGuiSetCond_FirstUseEver);
-		ImGui::SetNextWindowSize(ImVec2(300 * example->ui.scale, 200 * example->ui.scale), ImGuiSetCond_FirstUseEver);
-		ImGui::Begin("Example settings");
-		ImGui::Checkbox("Render models", &uiSettings.displayModels);
-		ImGui::Checkbox("Display logos", &uiSettings.displayLogos);
-		ImGui::Checkbox("Display background", &uiSettings.displayBackground);
-		ImGui::Checkbox("Animate light", &uiSettings.animateLight);
-		ImGui::SliderFloat("Light speed", &uiSettings.lightSpeed, 0.1f, 1.0f);
-
-		ImGui::End();
-
-		//SRS - ShowDemoWindow() sets its own initial position and size, cannot override here
-		ImGui::ShowDemoWindow();
-
-		// Render to generate draw buffers
 		ImGui::Render();
 	}
 
