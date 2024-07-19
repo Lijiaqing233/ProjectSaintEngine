@@ -1,0 +1,10 @@
+^C:\PROJECTSAINTENGINE\CMAKEFILES\38CAC07A0B1A08DFF86EEDD94149E5D5\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/ProjectSaintEngine -BC:/ProjectSaintEngine --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/ProjectSaintEngine/SaintEngine.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
