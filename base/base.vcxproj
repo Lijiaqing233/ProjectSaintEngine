@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{19E70557-5342-3713-B503-5DC461A62847}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>base</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\ProjectSaintEngine\base\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">base.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">base</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\ProjectSaintEngine\base\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">base.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">base</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\ProjectSaintEngine\base\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">base.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">base</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\ProjectSaintEngine\base\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">base.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">base</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ProjectSaintEngine\external;C:\ProjectSaintEngine\external\glm;C:\ProjectSaintEngine\external\gli;C:\ProjectSaintEngine\external\imgui;C:\ProjectSaintEngine\external\tinygltf;C:\ProjectSaintEngine\external\ktx\include;C:\ProjectSaintEngine\external\ktx\other_include;C:\ProjectSaintEngine\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;NOMINMAX;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;VK_EXAMPLE_ASSETS_DIR="C:/ProjectSaintEngine/assets/";VK_EXAMPLE_SHADERS_DIR="C:/ProjectSaintEngine/shaders/";CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;NOMINMAX;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;VK_EXAMPLE_ASSETS_DIR=\"C:/ProjectSaintEngine/assets/\";VK_EXAMPLE_SHADERS_DIR=\"C:/ProjectSaintEngine/shaders/\";CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProjectSaintEngine\external;C:\ProjectSaintEngine\external\glm;C:\ProjectSaintEngine\external\gli;C:\ProjectSaintEngine\external\imgui;C:\ProjectSaintEngine\external\tinygltf;C:\ProjectSaintEngine\external\ktx\include;C:\ProjectSaintEngine\external\ktx\other_include;C:\ProjectSaintEngine\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ProjectSaintEngine\external;C:\ProjectSaintEngine\external\glm;C:\ProjectSaintEngine\external\gli;C:\ProjectSaintEngine\external\imgui;C:\ProjectSaintEngine\external\tinygltf;C:\ProjectSaintEngine\external\ktx\include;C:\ProjectSaintEngine\external\ktx\other_include;C:\ProjectSaintEngine\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ProjectSaintEngine\external;C:\ProjectSaintEngine\external\glm;C:\ProjectSaintEngine\external\gli;C:\ProjectSaintEngine\external\imgui;C:\ProjectSaintEngine\external\tinygltf;C:\ProjectSaintEngine\external\ktx\include;C:\ProjectSaintEngine\external\ktx\other_include;C:\ProjectSaintEngine\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;NOMINMAX;_USE_MATH_DEFINES;NDEBUG;_CRT_SECURE_NO_WARNINGS;VK_EXAMPLE_ASSETS_DIR="C:/ProjectSaintEngine/assets/";VK_EXAMPLE_SHADERS_DIR="C:/ProjectSaintEngine/shaders/";CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;NOMINMAX;_USE_MATH_DEFINES;NDEBUG;_CRT_SECURE_NO_WARNINGS;VK_EXAMPLE_ASSETS_DIR=\"C:/ProjectSaintEngine/assets/\";VK_EXAMPLE_SHADERS_DIR=\"C:/ProjectSaintEngine/shaders/\";CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProjectSaintEngine\external;C:\ProjectSaintEngine\external\glm;C:\ProjectSaintEngine\external\gli;C:\ProjectSaintEngine\external\imgui;C:\ProjectSaintEngine\external\tinygltf;C:\ProjectSaintEngine\external\ktx\include;C:\ProjectSaintEngine\external\ktx\other_include;C:\ProjectSaintEngine\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ProjectSaintEngine\external;C:\ProjectSaintEngine\external\glm;C:\ProjectSaintEngine\external\gli;C:\ProjectSaintEngine\external\imgui;C:\ProjectSaintEngine\external\tinygltf;C:\ProjectSaintEngine\external\ktx\include;C:\ProjectSaintEngine\external\ktx\other_include;C:\ProjectSaintEngine\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ProjectSaintEngine\external;C:\ProjectSaintEngine\external\glm;C:\ProjectSaintEngine\external\gli;C:\ProjectSaintEngine\external\imgui;C:\ProjectSaintEngine\external\tinygltf;C:\ProjectSaintEngine\external\ktx\include;C:\ProjectSaintEngine\external\ktx\other_include;C:\ProjectSaintEngine\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;NOMINMAX;_USE_MATH_DEFINES;NDEBUG;_CRT_SECURE_NO_WARNINGS;VK_EXAMPLE_ASSETS_DIR="C:/ProjectSaintEngine/assets/";VK_EXAMPLE_SHADERS_DIR="C:/ProjectSaintEngine/shaders/";CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;NOMINMAX;_USE_MATH_DEFINES;NDEBUG;_CRT_SECURE_NO_WARNINGS;VK_EXAMPLE_ASSETS_DIR=\"C:/ProjectSaintEngine/assets/\";VK_EXAMPLE_SHADERS_DIR=\"C:/ProjectSaintEngine/shaders/\";CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProjectSaintEngine\external;C:\ProjectSaintEngine\external\glm;C:\ProjectSaintEngine\external\gli;C:\ProjectSaintEngine\external\imgui;C:\ProjectSaintEngine\external\tinygltf;C:\ProjectSaintEngine\external\ktx\include;C:\ProjectSaintEngine\external\ktx\other_include;C:\ProjectSaintEngine\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ProjectSaintEngine\external;C:\ProjectSaintEngine\external\glm;C:\ProjectSaintEngine\external\gli;C:\ProjectSaintEngine\external\imgui;C:\ProjectSaintEngine\external\tinygltf;C:\ProjectSaintEngine\external\ktx\include;C:\ProjectSaintEngine\external\ktx\other_include;C:\ProjectSaintEngine\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ProjectSaintEngine\external;C:\ProjectSaintEngine\external\glm;C:\ProjectSaintEngine\external\gli;C:\ProjectSaintEngine\external\imgui;C:\ProjectSaintEngine\external\tinygltf;C:\ProjectSaintEngine\external\ktx\include;C:\ProjectSaintEngine\external\ktx\other_include;C:\ProjectSaintEngine\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;NOMINMAX;_USE_MATH_DEFINES;NDEBUG;_CRT_SECURE_NO_WARNINGS;VK_EXAMPLE_ASSETS_DIR="C:/ProjectSaintEngine/assets/";VK_EXAMPLE_SHADERS_DIR="C:/ProjectSaintEngine/shaders/";CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;VK_USE_PLATFORM_WIN32_KHR;NOMINMAX;_USE_MATH_DEFINES;NDEBUG;_CRT_SECURE_NO_WARNINGS;VK_EXAMPLE_ASSETS_DIR=\"C:/ProjectSaintEngine/assets/\";VK_EXAMPLE_SHADERS_DIR=\"C:/ProjectSaintEngine/shaders/\";CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProjectSaintEngine\external;C:\ProjectSaintEngine\external\glm;C:\ProjectSaintEngine\external\gli;C:\ProjectSaintEngine\external\imgui;C:\ProjectSaintEngine\external\tinygltf;C:\ProjectSaintEngine\external\ktx\include;C:\ProjectSaintEngine\external\ktx\other_include;C:\ProjectSaintEngine\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ProjectSaintEngine\external;C:\ProjectSaintEngine\external\glm;C:\ProjectSaintEngine\external\gli;C:\ProjectSaintEngine\external\imgui;C:\ProjectSaintEngine\external\tinygltf;C:\ProjectSaintEngine\external\ktx\include;C:\ProjectSaintEngine\external\ktx\other_include;C:\ProjectSaintEngine\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\ProjectSaintEngine\base\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/ProjectSaintEngine/base/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/ProjectSaintEngine -BC:/ProjectSaintEngine --check-stamp-file C:/ProjectSaintEngine/base/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\ProjectSaintEngine\base\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/ProjectSaintEngine/base/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/ProjectSaintEngine -BC:/ProjectSaintEngine --check-stamp-file C:/ProjectSaintEngine/base/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\ProjectSaintEngine\base\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/ProjectSaintEngine/base/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/ProjectSaintEngine -BC:/ProjectSaintEngine --check-stamp-file C:/ProjectSaintEngine/base/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\ProjectSaintEngine\base\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/ProjectSaintEngine/base/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/ProjectSaintEngine -BC:/ProjectSaintEngine --check-stamp-file C:/ProjectSaintEngine/base/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\ProjectSaintEngine\base\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\ProjectSaintEngine\external\imgui\imgui.cpp" />
+    <ClCompile Include="C:\ProjectSaintEngine\external\imgui\imgui_demo.cpp" />
+    <ClCompile Include="C:\ProjectSaintEngine\external\imgui\imgui_draw.cpp" />
+    <ClCompile Include="C:\ProjectSaintEngine\external\imgui\imgui_widgets.cpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\CommandLineParser.hpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\Entrypoints.h" />
+    <ClCompile Include="C:\ProjectSaintEngine\base\VulkanAndroid.cpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\VulkanAndroid.h" />
+    <ClCompile Include="C:\ProjectSaintEngine\base\VulkanBuffer.cpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\VulkanBuffer.h" />
+    <ClCompile Include="C:\ProjectSaintEngine\base\VulkanDebug.cpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\VulkanDebug.h" />
+    <ClCompile Include="C:\ProjectSaintEngine\base\VulkanDevice.cpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\VulkanDevice.h" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\VulkanFrameBuffer.hpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\VulkanInitializers.hpp" />
+    <ClCompile Include="C:\ProjectSaintEngine\base\VulkanRaytracingSample.cpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\VulkanRaytracingSample.h" />
+    <ClCompile Include="C:\ProjectSaintEngine\base\VulkanSwapChain.cpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\VulkanSwapChain.h" />
+    <ClCompile Include="C:\ProjectSaintEngine\base\VulkanTexture.cpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\VulkanTexture.h" />
+    <ClCompile Include="C:\ProjectSaintEngine\base\VulkanTools.cpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\VulkanTools.h" />
+    <ClCompile Include="C:\ProjectSaintEngine\base\VulkanUIOverlay.cpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\VulkanUIOverlay.h" />
+    <ClCompile Include="C:\ProjectSaintEngine\base\VulkanglTFModel.cpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\VulkanglTFModel.h" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\benchmark.hpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\camera.hpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\frustum.hpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\keycodes.hpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\threadpool.hpp" />
+    <ClCompile Include="C:\ProjectSaintEngine\base\vulkanbase.cpp" />
+    <ClInclude Include="C:\ProjectSaintEngine\base\vulkanbase.h" />
+    <ClCompile Include="C:\ProjectSaintEngine\external\ktx\lib\texture.c" />
+    <ClCompile Include="C:\ProjectSaintEngine\external\ktx\lib\hashlist.c" />
+    <ClCompile Include="C:\ProjectSaintEngine\external\ktx\lib\checkheader.c" />
+    <ClCompile Include="C:\ProjectSaintEngine\external\ktx\lib\swap.c" />
+    <ClCompile Include="C:\ProjectSaintEngine\external\ktx\lib\memstream.c" />
+    <ClCompile Include="C:\ProjectSaintEngine\external\ktx\lib\filestream.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\ProjectSaintEngine\ZERO_CHECK.vcxproj">
+      <Project>{3C40CE1D-A23F-3669-9800-D36630EB3B62}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
